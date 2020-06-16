@@ -1,0 +1,19 @@
+ul{
+    list-style: none;
+}
+ul li{
+    width: 25%;
+    background-color: aqua;
+    height: 50px;
+    line-height: 50px;
+    color: blue;
+    font-family: sans-serif;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    float: left;
+    text-align: center;
+}
+ul li:hover{
+    background-color: blue;
+    color: aqua;
+}
