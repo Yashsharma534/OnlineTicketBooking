@@ -1,7 +1,8 @@
+.one{
+    background-color: yellow;
+}
 
-div.first{
-    width: 200px;
-    height: 200px;
-    background-color:aqua; 
-    margin: 0 auto;
+
+.two{
+    background-color: brown;
 }

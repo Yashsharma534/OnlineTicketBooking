@@ -1,8 +1,10 @@
 ul{
     list-style: none;
+    overflow: hidden;
+    padding: 0;
 }
 ul li{
-    width: 25%;
+    width: 20%;
     background-color: aqua;
     height: 50px;
     line-height: 50px;
@@ -13,6 +15,7 @@ ul li{
     float: left;
     text-align: center;
 }
+
 ul li:hover{
     background-color: blue;
     color: aqua;

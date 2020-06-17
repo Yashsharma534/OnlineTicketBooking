@@ -1,0 +1,24 @@
+
+
+<div class="loginform" >
+
+    <app-customcard title="Contact Form" info="your details are secure here">
+    
+        <form #f="ngForm">
+            <div class="form-group"  >
+              <label for="email">Email address:</label>
+              <input #emailref="ngModel"  [(ngModel)]="emailProp" name="email"   type="email" class="form-control" placeholder="Enter email" id="email">
+            </div>
+            <div class="form-group">
+              <label for="pwd">Password:</label>
+              <input #passref="ngModel"  [(ngModel)]="passwordProp" name="password"  type="password" class="form-control" placeholder="Enter password" id="pwd">
+            </div>
+            
+            <button type="submit" class="btn btn-primary"  (click)="login()"  >Submit</button>
+
+            <a routerLink="/signup">SigUP if Not Already Registered</a>
+          </form>
+    
+    </app-customcard>
+    
+    </div>
