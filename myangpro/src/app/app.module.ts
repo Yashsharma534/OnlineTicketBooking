@@ -3,38 +3,55 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { WebsiteComponent } from './website/website.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { BannerComponent } from './banner/banner.component';
-import { TestimoinalComponent } from './testimoinal/testimoinal.component';
-import { TestimonialComponent } from './testimoinal/testimonial.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
-import { ServicesComponent } from './services/services.component';
-import { GalleryComponent } from './gallery/gallery.component';
-import { EventComponent } from './event/event.component';
-import { CelebrationComponent } from './celebration/celebration.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { DashboardheaderComponent } from './dashboardheader/dashboardheader.component';
+import { DashboardsidebarComponent } from './dashboardsidebar/dashboardsidebar.component';
+import { NewStudentComponent } from './new-student/new-student.component';
+import { ListStudentComponent } from './list-student/list-student.component';
+import { LoginComponent } from './login/login.component';
+import { ProductsComponent } from './products/products.component';
+import { HttpClientModule } from '@angular/common/http';
+import { PrefixPipe } from './prefix.pipe';
+import { PercentPipe } from './percent.pipe';
+import { PostComponent } from './post/post.component';
+import { CustomcardComponent } from './customcard/customcard.component';
+import { FormsModule } from '@angular/forms';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    WebsiteComponent,
+    DashboardComponent,
     HomeComponent,
-    HeaderComponent,
-    FooterComponent,
-    BannerComponent,
-    TestimoinalComponent,
-    TestimonialComponent,
     AboutComponent,
     ContactComponent,
-    ServicesComponent,
-    GalleryComponent,
-    EventComponent,
-    CelebrationComponent
+    HeaderComponent,
+    FooterComponent,
+    DashboardheaderComponent,
+    DashboardsidebarComponent,
+    NewStudentComponent,
+    ListStudentComponent,
+    LoginComponent,
+    ProductsComponent,
+    PrefixPipe,
+    PercentPipe,
+    PostComponent,
+    CustomcardComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

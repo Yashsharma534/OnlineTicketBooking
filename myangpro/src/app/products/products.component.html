@@ -1,0 +1,27 @@
+<h1>Product List</h1>
+
+Total : {{ total}} <br>
+Tax :   {{total | percent:12}}
+
+<div class="products" >
+    <!-- <div class="item" *ngFor="let p of allProducts">
+            <p>{{p.title}}</p>
+            <p>Price: {{ p.price}}</p>
+            <p>Avaible Qty: {{ p.available}}</p>
+    </div> -->
+        <!-- <div class="item" *ngFor="let p of posts">
+
+      
+                        <h3>{{p.title | prefix}}</h3>
+                        <p>Id: {{ p.id}}</p>
+                        <p>body: {{ p.body}}</p>
+        </div> -->
+
+        <app-post class="item" *ngFor="let p of posts" id="{{p.id}}" title="{{p.title}}" body="{{p.body}}" ></app-post>
+
+
+
+</div>
+
+
+<!-- pipe is used transform value to be interpolated.  -->

@@ -1,8 +1,19 @@
+.topnav {
+    overflow: hidden;
+    background-color: #e9e9e9;
+  }
+  
+  
+ 
 ul{
     list-style: none;
+    overflow: hidden;
+    padding-top: 25px;
 }
 ul li{
     width: 33.3%;
+    width: 20%;
+
     background-color: aqua;
     height: 50px;
     line-height: 50px;
@@ -13,6 +24,7 @@ ul li{
     float: left;
     text-align: center;
 }
+
 ul li:hover{
     background-color: blue;
     color: aqua;
