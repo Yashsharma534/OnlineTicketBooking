@@ -4,17 +4,34 @@
 
 <div class="services">
     <div class="service"> 
-                <app-customcard title="development" >
+                <app-customcard title="CINEPLEX" >
             <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero maxime possimus eaque velit, deleniti fuga autem cupiditate aspernatur minus ut porro dolorem optio sit perferendis omnis delectus illo quod quidem.</p>    
         </app-customcard>
     </div>
-    <div  class="service"> 
-         
-            <app-customcard title="training"> 
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore explicabo repellat fugiat a, soluta inventore neque maiores minima beatae molestias unde repudiandae doloribus dicta ipsum voluptatibus nesciunt nobis, esse voluptas.
-                </p>
-            </app-customcard>
+    <div  class="service" style="background-color: bisque;"> 
+        
+            <app-customcard title="Feedback Form" info="your details are secure here" style="background-color: bisque;" >
+            <form  style="background-color: bisque;">
+                <div class="form-group">
+                  <label for="email">Email address:</label>
+                  <input type="email" class="form-control" placeholder="Enter email" id="email">
+                </div>
 
+                <div class="form-group">
+                    <label for="title">Feedback</label>
+                    <input type="text" class="form-control" placeholder="Your Feedback..." id="email">
+                  </div>
+
+
+                               <div class="form-group form-check">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox"> Remember me
+                  </label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+        
+        </app-customcard>
     </div>
 </div>
 
