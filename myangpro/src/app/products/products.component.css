@@ -1,4 +1,4 @@
-.item{
+/* .item{
     width: 350px;
     height: 300px;
     box-shadow: 3px 4px 4px gray;
@@ -15,4 +15,34 @@
     flex-wrap: wrap;
     padding: 50px;
     box-sizing: border-box;
+} */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 30% 30% 30% ;
+  grid-gap: 10px 10px;
+  /* grid-column-gap: 10px;
+  grid-row-gap: 10px; */
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color:aqua;
+  text-align: center;
+  padding: 2px 15px;
+  font-size: 15px;
+  height:200px;
+  overflow:hidden;
+  width:350px;
+  box-sizing:border-box;
+  
+}
+p
+{
+font-size:15px;
+font-display:Bold;
+}
+.main1
+{
+  background-color: cornsilk;
 }

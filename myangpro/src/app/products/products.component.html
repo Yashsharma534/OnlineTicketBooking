@@ -1,27 +1,92 @@
-<h1>Product List</h1>
-
-Total : {{ total}} <br>
-Tax :   {{total | percent:12}}
-
-<div class="products" >
-    <!-- <div class="item" *ngFor="let p of allProducts">
-            <p>{{p.title}}</p>
-            <p>Price: {{ p.price}}</p>
-            <p>Avaible Qty: {{ p.available}}</p>
-    </div> -->
-        <!-- <div class="item" *ngFor="let p of posts">
-
-      
-                        <h3>{{p.title | prefix}}</h3>
-                        <p>Id: {{ p.id}}</p>
-                        <p>body: {{ p.body}}</p>
-        </div> -->
-
-        <app-post class="item" *ngFor="let p of posts" id="{{p.id}}" title="{{p.title}}" body="{{p.body}}" ></app-post>
-
-
-
-</div>
-
-
-<!-- pipe is used transform value to be interpolated.  -->
+<div class="main1">
+        <div class="grid-container">
+          <div style="margin-left: 90px;">
+          
+         <p> When do bookings show up on Cineplex for upcoming movies at a particular cinema?</p>
+         
+         Cinemas open bookings 2-3 days prior to the release date and this can vary from cinema to cinema. 
+        Once bookings go live by the cinema, you can grab your desired tickets and enjoy the show. 
+        
+          </div>
+          <div style="margin-left: 90px;">
+          
+         <p> My previous transaction was canceled/incomplete. Why do the selected seats appear to be booked?</p>
+        
+        In case you've selected the seats they are blocked to prevent another user from opting for the same seats. 
+        If the booking is left incomplete , the seats are blocked for 7 to 8 minutes which gets unblocked post the mentioned time.
+          
+          </div>
+          <div style="margin-left: 90px;">
+          
+          <p>Is there a cut off time for booking the tickets?</p>
+        
+        Online booking is ideally available 1 hour to 15 minutes prior to the showtime and it varies from cinema to cinema.
+        
+        
+        Certain cinema do allow last minutes booking too :)
+        
+        P.S: Cinema can stop the online booking before the cut off time since they reserve the seats for offline bookings.
+          
+          </div>  
+          <div style="padding:25px 15px;margin-left: 90px;">
+          
+        
+         <p> Choose the preferred seats</p>
+        Absolutely! You can choose the desired seats on the  booking form. 
+        
+        
+        
+        This facility is only available for venues that offer seat selection while booking apart from zero value cinemas
+          
+          </div>
+          <div style="padding:25px 15px;margin-left: 90px;">
+          
+        <p> How many tickets can I book in one transaction for a movie and event?</p>
+        
+        
+        Movies: A maximum of six to ten tickets per transaction, which may differ from cinema to cinema.
+          
+          </div>
+          <div style="padding:25px 15px;margin-left: 90px;">
+        <p>Your feedback matter a lot to us. We will definitely share it with the relevant cinema.</p> 
+        
+        
+        
+        Sorry to know the experience wasn't upto the mark. Share your concern by clicking on this link
+          
+          
+          </div>  
+          <div style="padding:25px 15px;margin-left: 90px;">
+          
+         <p> Is alcohol allowed in the cinema? </p>
+        
+        
+        
+        No, anyone found consuming or carrying alcohol to the cinema. The cinema has the right to deny the entry.
+          
+          
+          </div>
+          <div style="padding:25px 15px;margin-left: 90px;">
+          
+          
+         <p> Will I be allowed to carry my laptop bag into the cinema?</p>
+        
+        
+        
+        The cinema would be in a better state to help you with this information.
+        We recommend you do not carry heavy baggage to cinemas to avoid disappointment.
+          
+          </div>
+          <div style="padding:25px 15px;margin-left: 90px;">
+          
+         <p> Will I be allowed to carry my laptop bag into the cinema?</p>
+        
+        
+        
+        The cinema would be in a better state to help you with this information.
+        We recommend you do not carry heavy baggage to cinemas to avoid disappointment.
+          
+          </div>
+        </div>
+</div>      
+        
