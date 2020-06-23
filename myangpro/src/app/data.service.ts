@@ -28,5 +28,8 @@ export class DataService {
   {
     return this.http.post('http://localhost:3000/sign-in', d);
   }
-
+liststudent(d):any
+{
+  return this.http.post('http://localhost:3000/list-student', d);
+}
 }
