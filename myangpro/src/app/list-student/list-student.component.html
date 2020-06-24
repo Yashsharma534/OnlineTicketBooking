@@ -9,9 +9,25 @@
             </div>
             <div class="form-group"  >
                 <label for="email">Movie Name:</label>
-                <input #emailref="ngModel"  [(ngModel)]="movieProp" name="movie"   type="movie" class="form-control" placeholder="Enter Movie" id="movie">
+                <select id="cars">
+                  <option value="volvo">Gulabo Sitabo</option>
+                  <option value="saab">Street Dancer 3D</option>
+                      <option value="opel">Bhoot</option>
+                      <option value="audi">Lov Aaj Kal</option>
+                     </select>
               </div>
+              
               <div class="form-group"  >
+                <label for="cars">Hall Name:</label>
+
+                <select id="cars">
+                 <option value="volvo">Inox</option>
+                 <option value="saab">Cinepolis</option>
+                     <option value="opel">Pink SQuare</option>
+                     <option value="audi">Raj Mandir</option>
+                    </select>
+              </div>
+             <div class="form-group"  >
                 <label for="cars">Seat:</label>
 
                 <select id="cars">
@@ -21,9 +37,9 @@
                      <option value="audi">other</option>
                     </select>
               </div>
-             
-            <button type="submit" class="btn btn-primary"  (click)="liststudent()"  >Get ticket</button>
 
+            <button type="submit" class="btn btn-primary"  (click)="liststudent()"  >Get ticket</button>
+            
             
           </form>
     

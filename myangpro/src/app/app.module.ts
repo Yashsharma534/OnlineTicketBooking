@@ -23,6 +23,8 @@ import { PostComponent } from './post/post.component';
 import { CustomcardComponent } from './customcard/customcard.component';
 import { FormsModule } from '@angular/forms';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { PaymentComponent } from './payment/payment.component';
+
 
 @NgModule({
   declarations: [
@@ -44,7 +46,9 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     PercentPipe,
     PostComponent,
     CustomcardComponent,
-    SignUpComponent
+    SignUpComponent,
+    PaymentComponent,
+  
   ],
   imports: [
     BrowserModule,

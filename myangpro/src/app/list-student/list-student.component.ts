@@ -10,22 +10,24 @@ import { DataService } from '../data.service';
 export class ListStudentComponent implements OnInit {
 nameProp;
 movieProp;
+hallProp;
+seatProp;
 
   constructor(private router:Router, private ds:DataService) { }
 
   ngOnInit(): void {
+   
   }
   liststudent()
   {
       
-    this.ds.liststudent({ name:this.nameProp})
+    this.ds.liststudent({ name:this.nameProp,movie:this.movieProp,hall:this.hallProp,seat:this.seatProp})
     .subscribe((response)=>{
       if(response.status=="ok")
       {
         
-        localStorage.setItem('name', response.data[0].name);          
-        localStorage.setItem('movie', response.data[0].movie); 
-
+        alert("filled");
+        this.router.navigate(['/payment']);
       }
       else{
         alert("credentials are incorrect");

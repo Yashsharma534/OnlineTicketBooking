@@ -11,6 +11,8 @@ import { LoginComponent } from './login/login.component';
 import { ProductsComponent } from './products/products.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { AuthGuard } from './auth.guard';
+import { PaymentComponent } from './payment/payment.component';
+
 
 
 const routes: Routes = [
@@ -42,7 +44,8 @@ const routes: Routes = [
                                                       {path:'', component:ListStudentComponent},
                                                       {path:'liststudent', component:ListStudentComponent},
                                                       {path:'newstudent', component:NewStudentComponent}
-                                              ]}
+                                              ]},
+                                              {path:'payment', component:PaymentComponent}
 ];
 
 @NgModule({
