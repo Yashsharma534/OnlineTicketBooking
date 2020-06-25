@@ -40,6 +40,7 @@ collection.find(req.body).toArray((err,docs)=>{
 })
 app.post('/sign-up', bodyParser.json() ,(req,res)=>{
 
+
   var collection = connection.db(dbname).collection('users');
   collection.find({email:req.body.email}).toArray((err,docs)=>{
   if(!err && docs.length>0)
@@ -60,4 +61,27 @@ app.post('/sign-up', bodyParser.json() ,(req,res)=>{
     }
     })
 })
+app.post('/list-student', bodyParser.json() ,(req,res)=>{
+
+    var collection = connection.db(dbname).collection('users');
+    collection.find({name:req.body.email}).toArray((err,docs)=>{
+    if(!err && docs.length>0)
+    {
+       res.send({status:"failed", data:"email already Exist"})
+    }
+    else{
+          collection.insert(req.body, (err,result)=>{
+              if(!err)
+              {
+                  res.send({ status:"ok", data:"signup success" });
+              }
+              else{
+                  res.send({status:"failed", data:err});
+              }
+          
+          })
+      }
+      })
+  })
+  
 app.listen(3000,()=>{console.log("server is listening on port 3000")});

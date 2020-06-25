@@ -26,6 +26,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { PaymentComponent } from './payment/payment.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,6 +49,7 @@ import { PaymentComponent } from './payment/payment.component';
     CustomcardComponent,
     SignUpComponent,
     PaymentComponent,
+    
   
   ],
   imports: [
