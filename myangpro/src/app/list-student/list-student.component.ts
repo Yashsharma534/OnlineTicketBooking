@@ -27,7 +27,7 @@ seatProp;
       {
         
         alert("filled");
-        this.router.navigate(['/payment']);
+        this.router.navigate(['payment']);
       }
       else{
         alert("credentials are incorrect");

@@ -5,7 +5,7 @@ const MongoClient =require('mongodb').MongoClient;
 const ObjectId=require('mongodb').ObjectID;
 var dbname="datacollection"
 //var client = new MongoClient( 'mongodb://localhost:27017/mypro', {useNewUrlParser:true});
-var client = new MongoClient( 'mongodb+srv://admin:admin@cluster0-mwcbo.mongodb.net/dbname?retryWrites=true&w=majority', {useNewUrlParser:true});
+var client = new MongoClient( 'mongodb+srv://admin:admin@cluster0-mwcbo.mongodb.net/datacollection?retryWrites=true&w=majority', {useNewUrlParser:true});
  var connection;
 client.connect((err,con)=>{
     if(!err)
