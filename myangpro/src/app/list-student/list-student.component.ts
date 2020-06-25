@@ -26,7 +26,7 @@ seatProp;
       if(response.status=="ok")
       {
         
-        alert("filled");
+      
         this.router.navigate(['/payment']);
       }
       else{

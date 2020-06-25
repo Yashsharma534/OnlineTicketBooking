@@ -29,9 +29,13 @@ export class LoginComponent implements OnInit {
         
         localStorage.setItem('name', response.data[0].name);          
         localStorage.setItem('email', response.data[0].email);
-        localStorage.setItem('role', response.data[0].role);
+        if( response.data[0].role=='admin')
+        {
         this.router.navigate(['/dashboard']);
-
+        }
+        else{
+          this.router.navigate(['/payment']);
+        }
       }
       else{
         alert("credentials are incorrect");
