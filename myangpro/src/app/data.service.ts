@@ -32,5 +32,8 @@ liststudent(d):any
 {
   return this.http.post('http://localhost:3000/list-student', d);
 }
-
+show(d):any
+{
+  return this.http.post('http://localhost:3000/list-student', d);
+}
 }

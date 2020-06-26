@@ -8,11 +8,13 @@ import { DataService } from '../data.service';
   styleUrls: ['./list-student.component.css']
 })
 export class ListStudentComponent implements OnInit {
-nameProp;
 movieProp;
 hallProp;
-seatProp;
-
+aProp;
+bProp;
+cProp;
+dateProp;
+timeProp;
 
   constructor(private router:Router, private ds:DataService) { }
 
@@ -22,13 +24,13 @@ seatProp;
   liststudent()
   {
       
-    this.ds.liststudent({ name:this.nameProp,movie:this.movieProp,hall:this.hallProp,seat:this.seatProp})
+    this.ds.liststudent({movie:this.movieProp,hall:this.hallProp,front:{total:40,booked:0},middle:{total:40,booked:0},balcony:{total:40,booked:0},date:this.dateProp,time:this.timeProp})
     .subscribe((response)=>{
       if(response.status=="ok")
       {
         
       
-        this.router.navigate(['/payment']);
+        alert("show at hall");
       }
       else{
         alert("credentials are incorrect");
