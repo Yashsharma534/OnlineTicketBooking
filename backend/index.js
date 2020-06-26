@@ -63,7 +63,7 @@ app.post('/sign-up', bodyParser.json() ,(req,res)=>{
 })
 app.post('/list-student', bodyParser.json() ,(req,res)=>{
 
-    var collection = connection.db(dbname).collection('users');
+    var collection = connection.db(dbname).collection('show');
     collection.find({name:req.body.email}).toArray((err,docs)=>{
     if(!err && docs.length>0)
     {
@@ -83,5 +83,16 @@ app.post('/list-student', bodyParser.json() ,(req,res)=>{
       }
       })
   })
-  
+  app.post('/userbooking',bodyParser.json(),(req,res)=>{
+    var collection = connection.db(dbname).collection('show');
+    collection.find().toArray((err,docs)=>{
+        if(!err && docs.length>0)
+        {
+            res.send({status:"ok",data:docs});
+        }
+        else{
+            res.send({status:"failed", data:err});
+        }
+    })
+    })
 app.listen(3000,()=>{console.log("server is listening on port 3000")});
