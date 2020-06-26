@@ -13,6 +13,7 @@ movieProp;
 hallProp;
 seatProp;
 
+
   constructor(private router:Router, private ds:DataService) { }
 
   ngOnInit(): void {
@@ -32,6 +33,7 @@ seatProp;
       else{
         alert("credentials are incorrect");
       }
-    })
+    }) 
   }
+  
 }
