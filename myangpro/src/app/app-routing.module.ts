@@ -12,6 +12,7 @@ import { ProductsComponent } from './products/products.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { AuthGuard } from './auth.guard';
 import { PaymentComponent } from './payment/payment.component';
+import { UserbookingComponent } from './userbooking/userbooking.component';
 
 
 
@@ -35,17 +36,17 @@ const routes: Routes = [
                                                       },
                                                       {
                                                         path:'products', component:ProductsComponent
-                                                      } 
+                                                      } ,
+                                                      {path:'payment', component:PaymentComponent},
                                                       
-                                                      
-
+                                                      {path:'userbooking', component:UserbookingComponent}
                                               ]},
   {path:'dashboard', component:DashboardComponent, canActivate:[AuthGuard]   ,children:[
                                                       {path:'', component:ListStudentComponent},
                                                       {path:'liststudent', component:ListStudentComponent},
                                                       {path:'newstudent', component:NewStudentComponent}
                                               ]},
-                                              {path:'payment', component:PaymentComponent}
+                                             
 ];
 
 @NgModule({

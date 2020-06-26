@@ -9,34 +9,26 @@
             </div>
             <div class="form-group"  >
                 <label for="email">Movie Name:</label>
-                <select id="cars">
-                  <option value="volvo">Gulabo Sitabo</option>
-                  <option value="saab">Street Dancer 3D</option>
-                      <option value="opel">Bhoot</option>
-                      <option value="audi">Lov Aaj Kal</option>
-                     </select>
+                <input #emailref="ngModel"  [(ngModel)]="movieProp" name="name"   type="name" class="form-control" placeholder="Enter name" id="name">
               </div>
               
               <div class="form-group"  >
                 <label for="cars">Hall Name:</label>
-
-                <select id="cars">
-                 <option value="volvo">Inox</option>
-                 <option value="saab">Cinepolis</option>
-                     <option value="opel">Pink SQuare</option>
-                     <option value="audi">Raj Mandir</option>
-                    </select>
+                <input #emailref="ngModel"  [(ngModel)]="hallProp" name="name"   type="name" class="form-control" placeholder="Enter name" id="name">
+               
               </div>
              <div class="form-group"  >
-                <label for="cars">Seat:</label>
+                <label for="seat">Seat:</label>
 
-                <select id="cars">
+                <select id="ramdom">
                  <option value="volvo">Front row</option>
                  <option value="saab">Middle row</option>
                      <option value="opel">Balcony</option>
                      <option value="audi">other</option>
                     </select>
               </div>
+              <input type="date" id="myDate" value="2014-02-09">
+              <input type="time" id="mytime" value=""><br>
 
             <button type="submit" class="btn btn-primary"  (click)="liststudent()"  >Get ticket</button>
             

@@ -24,6 +24,7 @@ import { CustomcardComponent } from './customcard/customcard.component';
 import { FormsModule } from '@angular/forms';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { PaymentComponent } from './payment/payment.component';
+import { UserbookingComponent } from './userbooking/userbooking.component';
 
 
 
@@ -49,6 +50,7 @@ import { PaymentComponent } from './payment/payment.component';
     CustomcardComponent,
     SignUpComponent,
     PaymentComponent,
+    UserbookingComponent,
     
   
   ],
@@ -56,7 +58,8 @@ import { PaymentComponent } from './payment/payment.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+  
 
   ],
   providers: [],
