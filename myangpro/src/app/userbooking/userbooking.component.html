@@ -6,7 +6,7 @@
           </option>
     </select>
 
-    <button type="submit" class="btn btn-primary"  (click)="show()"  >book ticket</button>
+    <button type="submit" class="btn btn-primary"  (click)="show()"  >shows</button>
 </div>
 
 
@@ -17,10 +17,11 @@
           {{s.date}} <br>
           {{s.time}} <br>
           {{s._id}} <br>
-         
-          <!-- <input type="text" [(ngModel)]="balcony" name="balcony">
-          <input type="text" [(ngModel)]="balcony" name="balcony">
-          <input type="text" [(ngModel)]="balcony" name="balcony"> -->
+         <form >
+           <input type="text" #balconyref="ngModel" [(ngModel)]="balconyProp" name="balcony" placeholder="balconyseat">
+          <input type="text" #frontref="ngModel" [(ngModel)]="frontProp" name="front" placeholder="frontseat">
+          <input type="text" #middleref="ngModel" [(ngModel)]="middleProp" name="middle"  placeholder="middleseat">
+        </form>
           <button (click)="bookThisShow(s._id)">Book Tickets</button>
    </div>
 </div>

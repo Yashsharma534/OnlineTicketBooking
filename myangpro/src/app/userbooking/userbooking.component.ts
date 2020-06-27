@@ -14,6 +14,9 @@ allShowsList;
 selectedShowsList;
 AllMovies;
 movieName;
+balconyProp;
+frontProp;
+middleProp;
   constructor(private router:Router,private ds:DataService) { }
 
   ngOnInit(): void {
@@ -39,4 +42,15 @@ movieName;
            console.log("after filter");
            console.log(this.selectedShowsList)
     }
+    bookThisShow(id)
+    {
+      this.ds.bookThisShow({front:this.frontProp,middle:this.middleProp,balcony:this.balconyProp})
+      .subscribe((response)=>{
+        if(response.status=="ok")
+        {
+              alert("show booked");
+              this.router.navigate(['/payment']);
+        }
+    })
+  }
  }
