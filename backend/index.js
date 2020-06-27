@@ -95,6 +95,7 @@ app.post('/createShow', bodyParser.json() ,(req,res)=>{
     app.post('/bookTheShow', bodyParser.json() ,(req,res)=>{
 
 
+        console.log(req.body);
         var collection = connection.db(dbname).collection('show');
         collection.find({id:req.body}).toArray((err,docs)=>{
         if(!err && docs.length>0)
@@ -102,12 +103,13 @@ app.post('/createShow', bodyParser.json() ,(req,res)=>{
            res.send({status:"failed", data:"data insert"})
         }
         else{
-              collection.insert(req.body, (err,result)=>{
+              collection.update({_id:ObjectId(req.body.id)},{ $inc:{"front.booked":req.body.front, "middle.booked":req.body.middle, "balcony.booked":req.body.balcony}}, (err,result)=>{
                   if(!err)
                   {
                       res.send({ status:"ok", data:" success" });
                   }
                   else{
+                      console.log(err);
                       res.send({status:"failed", data:err});
                   }
               

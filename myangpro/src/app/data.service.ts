@@ -26,7 +26,7 @@ liststudent(d):any
 getAllshow():any
 {
   return this.http.get('http://localhost:3000/getAllShows');
-  
+
 }
 bookThisShow(d):any
 {

@@ -44,8 +44,10 @@ middleProp;
     }
     bookThisShow(id)
     {
-      this.ds.bookThisShow({front:this.frontProp,middle:this.middleProp,balcony:this.balconyProp})
+      alert("in book show" + id);
+      this.ds.bookThisShow({id:id,front:this.frontProp,middle:this.middleProp,balcony:this.balconyProp})
       .subscribe((response)=>{
+        alert(JSON.stringify(response))
         if(response.status=="ok")
         {
               alert("show booked");
