@@ -92,4 +92,21 @@ app.post('/createShow', bodyParser.json() ,(req,res)=>{
         }
     })
     })
+    app.post('/createShow', bodyParser.json() ,(req,res)=>{
+
+        var collection = connection.db(dbname).collection('bookeddetail');  
+       
+              collection.insert(req.body, (err,result)=>{
+                  if(!err)
+                  {
+                      res.send({ status:"ok", data:"show created" });
+                  }
+                  else{
+                      res.send({status:"failed", data:err});
+                  }
+              
+              })
+          
+          
+      })
 app.listen(3000,()=>{console.log("server is listening on port 3000")});
