@@ -61,29 +61,26 @@ app.post('/sign-up', bodyParser.json() ,(req,res)=>{
     }
     })
 })
-app.post('/list-student', bodyParser.json() ,(req,res)=>{
+app.post('/createShow', bodyParser.json() ,(req,res)=>{
 
-    var collection = connection.db(dbname).collection('show');
-    collection.find({name:req.body.email}).toArray((err,docs)=>{
-    if(!err && docs.length>0)
-    {
-       res.send({status:"failed", data:"email already Exist"})
-    }
-    else{
+    var collection = connection.db(dbname).collection('show');  
+   
           collection.insert(req.body, (err,result)=>{
               if(!err)
               {
-                  res.send({ status:"ok", data:"signup success" });
+                  res.send({ status:"ok", data:"show created" });
               }
               else{
                   res.send({status:"failed", data:err});
               }
           
           })
-      }
-      })
+      
+      
   })
-  app.post('/userbooking',bodyParser.json(),(req,res)=>{
+
+
+  app.get('/getAllShows',(req,res)=>{
     var collection = connection.db(dbname).collection('show');
     collection.find().toArray((err,docs)=>{
         if(!err && docs.length>0)

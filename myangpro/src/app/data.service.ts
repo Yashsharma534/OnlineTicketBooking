@@ -21,10 +21,11 @@ export class DataService {
   }
 liststudent(d):any
 {
-  return this.http.post('http://localhost:3000/list-student', d);
+  return this.http.post('http://localhost:3000/createShow', d);
 }
-show(d):any
+getAllshow():any
 {
-  return this.http.post('http://localhost:3000/list-student', d);
+  return this.http.get('http://localhost:3000/getAllShows');
+  
 }
 }

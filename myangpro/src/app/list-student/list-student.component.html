@@ -25,8 +25,8 @@
              
               </div>
             
-              <input #emailref="ngModel"  [(ngModel)]="dateProp" type="date" id="myDate" >
-              <input #emailref="ngModel"  [(ngModel)]="timeProp" type="time" id="mytime" value=""><br>
+              <input #emailref="ngModel" name="date"  [(ngModel)]="dateProp" type="date" id="myDate" >
+              <input #emailref="ngModel" name="time"   [(ngModel)]="timeProp" type="time" id="mytime" value=""><br>
 
             <button type="submit" class="btn btn-primary"  (click)="liststudent()"  >Get ticket</button>
             

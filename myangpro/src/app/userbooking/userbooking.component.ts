@@ -10,25 +10,33 @@ import { DataService } from '../data.service';
 export class UserbookingComponent implements OnInit {
 dateProp;
 timeProp;
+allShowsList;
+selectedShowsList;
+AllMovies;
+movieName;
   constructor(private router:Router,private ds:DataService) { }
 
   ngOnInit(): void {
-  }
- show()
- {
-  this.ds.show({ date:this.dateProp,time:this.timeProp})
-  .subscribe((response)=>{
-    if(response.status=="ok")
-    {
-      
-      
-      this.router.navigate(['/payment']);
-      
- }
- else{
-   alert("filled the date and time");
- }
 
-})
- }
+    this.ds.getAllshow().subscribe((d)=>{
+          this.allShowsList=d.data;
+          console.log("all Shows")
+          console.log(this.allShowsList);
+      this.AllMovies=    this.allShowsList.map((s)=>{
+            return s.movie;
+          });
+          console.log("all movies")
+          console.log(this.AllMovies);
+
+    })
+
+  }
+    show()
+    {
+           this.selectedShowsList= this.allShowsList.filter((s)=>{
+             return s.movie == this.movieName;
+           })
+           console.log("after filter");
+           console.log(this.selectedShowsList)
+    }
  }

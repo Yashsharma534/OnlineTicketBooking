@@ -1,12 +1,26 @@
 <div class="contain">
-    <label for="start">Start date:</label>
+    <label for="start"> Movie</label>   
+    <select    name="movie" [(ngModel)]="movieName" id="">
+          <option *ngFor="let m of AllMovies"  value="{{m}}">
+               {{m}}
+          </option>
+    </select>
 
-<input type="date" id="start" name="trip-start"
-       value="2018-07-22">
-      
-       
-       <form id="myForm">
-        Time: <input type="time" id="myTime">
-      </form>
-      <button type="submit" class="btn btn-primary"  (click)="show()"  >book ticket</button>
+    <button type="submit" class="btn btn-primary"  (click)="show()"  >book ticket</button>
+</div>
+
+
+<div class="shows">
+   <div  *ngFor="let s of selectedShowsList" class="show">
+          {{s.movie}} <br>
+          {{s.hall}} <br>
+          {{s.date}} <br>
+          {{s.time}} <br>
+          {{s._id}} <br>
+         
+          <!-- <input type="text" [(ngModel)]="balcony" name="balcony">
+          <input type="text" [(ngModel)]="balcony" name="balcony">
+          <input type="text" [(ngModel)]="balcony" name="balcony"> -->
+          <button (click)="bookThisShow(s._id)">Book Tickets</button>
+   </div>
 </div>
