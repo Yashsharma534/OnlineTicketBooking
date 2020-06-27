@@ -3,10 +3,7 @@
     <app-customcard title="TICKET BOOKING" info="your details are secure here">
     
         <form #f="ngForm">
-            <div class="form-group"  >
-              <label for="email">Name:</label>
-              <input #emailref="ngModel"  [(ngModel)]="nameProp" name="name"   type="name" class="form-control" placeholder="Enter name" id="name">
-            </div>
+            
             <div class="form-group"  >
                 <label for="email">Movie Name:</label>
                 <input #emailref="ngModel"  [(ngModel)]="movieProp" name="name"   type="name" class="form-control" placeholder="Enter name" id="name">
@@ -18,17 +15,18 @@
                
               </div>
              <div class="form-group"  >
-                <label for="seat">Seat:</label>
-
-                <select id="ramdom">
-                 <option value="volvo">Front row</option>
-                 <option value="saab">Middle row</option>
-                     <option value="opel">Balcony</option>
-                     <option value="audi">other</option>
-                    </select>
+               
+                <label for="seat">Front:</label>
+                <option><input #emailref="ngModel"  [(ngModel)]="aProp" name="name"   type="name" class="form-control" placeholder="seats booked" id="number"></option>
+                <label for="seat">Middle:</label>
+               <option> <input #emailref="ngModel"  [(ngModel)]="bProp" name="name"   type="name" class="form-control" placeholder="seats booked" id="number"></option>
+                <label for="seat">Balcony:</label>
+               <option> <input #emailref="ngModel"  [(ngModel)]="cProp" name="name"   type="name" class="form-control" placeholder="seats booked" id="number"></option>
+             
               </div>
-              <input type="date" id="myDate" value="2014-02-09">
-              <input type="time" id="mytime" value=""><br>
+            
+              <input #emailref="ngModel"  [(ngModel)]="dateProp" type="date" id="myDate" >
+              <input #emailref="ngModel"  [(ngModel)]="timeProp" type="time" id="mytime" value=""><br>
 
             <button type="submit" class="btn btn-primary"  (click)="liststudent()"  >Get ticket</button>
             
