@@ -18,9 +18,9 @@
           {{s.time}} <br>
           {{s._id}} <br>
          <form >
-           <input type="text" #balconyref="ngModel" [(ngModel)]="balconyProp" name="balcony" placeholder="balconyseat">
-          <input type="text" #frontref="ngModel" [(ngModel)]="frontProp" name="front" placeholder="frontseat">
-          <input type="text" #middleref="ngModel" [(ngModel)]="middleProp" name="middle"  placeholder="middleseat">
+           <input type="number" #balconyref="ngModel" [(ngModel)]="balconyProp" name="balcony" placeholder="balconyseat">
+          <input type="number" #frontref="ngModel" [(ngModel)]="frontProp" name="front" placeholder="frontseat">
+          <input type="number" #middleref="ngModel" [(ngModel)]="middleProp" name="middle"  placeholder="middleseat">
         </form>
           <button (click)="bookThisShow(s._id)">Book Tickets</button>
    </div>
