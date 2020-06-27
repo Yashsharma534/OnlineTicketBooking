@@ -92,21 +92,27 @@ app.post('/createShow', bodyParser.json() ,(req,res)=>{
         }
     })
     })
-    app.post('/createShow', bodyParser.json() ,(req,res)=>{
+    app.post('/bookTheShow', bodyParser.json() ,(req,res)=>{
 
-        var collection = connection.db(dbname).collection('bookeddetail');  
-       
+
+        var collection = connection.db(dbname).collection('bookeddetail');
+        collection.find({id:req.body}).toArray((err,docs)=>{
+        if(!err && docs.length>0)
+        {
+           res.send({status:"failed", data:"data insert"})
+        }
+        else{
               collection.insert(req.body, (err,result)=>{
                   if(!err)
                   {
-                      res.send({ status:"ok", data:"show created" });
+                      res.send({ status:"ok", data:" success" });
                   }
                   else{
                       res.send({status:"failed", data:err});
                   }
               
               })
-          
-          
+          }
+          })
       })
 app.listen(3000,()=>{console.log("server is listening on port 3000")});
