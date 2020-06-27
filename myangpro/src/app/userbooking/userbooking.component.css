@@ -8,8 +8,34 @@
 
 .show{
             margin-top: 30px;
-            box-shadow: 4px 5px 4px black;
-            width: 400px;
-            height: 300px;
+            /* box-shadow: 4px 5px 4px black; */
+            width: 450px;
+            height: 350px;
+            /* background-color: cyan; */
+            font-size: x-large;
+            font-family: Arial, Helvetica, sans-serif;
+            font-display: Bold;
+            margin-left: 620px;
+            font-style: oblique;
+            font-weight: 200;
             
 }
+.contain{
+        /* background-color: darkgrey; */
+        font-size: x-large;
+        font-style: italic;
+        font-family: sans-serif;
+        font-weight: 100;
+        font-display: bold;
+        text-align: center;
+        height:650px;
+        background-image: url("../../assets/images/m1.jpg");
+
+        background-repeat: no-repeat;
+        background-size: cover;
+}
+/* .main{
+        background-color: darkkhaki;
+        height:150px;
+        width:100%;
+} */

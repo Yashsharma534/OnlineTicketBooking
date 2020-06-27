@@ -1,9 +1,10 @@
 
-
+<div class="design">
 <div class="loginform" >
 
-    <app-customcard title="Login Form" info="your details are secure here">
-    
+    <!-- <app-customcard title="Login Form" info="your details are secure here" style="margin: 500px;">
+    <div></div> -->
+    <h1>LOGIN FORM</h1>
         <form #f="ngForm">
             <div class="form-group"  >
               <label for="email">Email address:</label>
@@ -15,10 +16,11 @@
             </div>
             
             <button type="submit" class="btn btn-primary"  (click)="login()"  >Submit</button>
-
+            <br>
             <a routerLink="/signup">SignUP if Not Already Registered</a>
           </form>
     
-    </app-customcard>
-    
+    <!-- </app-customcard>
+     -->
     </div>
+</div>

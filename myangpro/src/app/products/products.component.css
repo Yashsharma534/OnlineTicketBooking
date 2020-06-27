@@ -44,5 +44,10 @@ font-display:Bold;
 }
 .main1
 {
-  background-color: cornsilk;
+  /* background-color: cornsilk; */
+  background-image: url("../../assets/images/m6.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    /* background-size: cover; */
+  
 }

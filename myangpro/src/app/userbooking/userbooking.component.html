@@ -1,27 +1,35 @@
+
 <div class="contain">
-    <label for="start"> Movie</label>   
+    <label for="start"> Movie Search</label>   
     <select    name="movie" [(ngModel)]="movieName" id="">
           <option *ngFor="let m of AllMovies"  value="{{m}}">
                {{m}}
           </option>
     </select>
-
-    <button type="submit" class="btn btn-primary"  (click)="show()"  >shows</button>
-</div>
+   <br>
+    <button type="submit" class="btn btn-primary"  (click)="show()"  >Shows Available</button>
+<!-- </div> -->
 
 
 <div class="shows">
    <div  *ngFor="let s of selectedShowsList" class="show">
-          {{s.movie}} <br>
-          {{s.hall}} <br>
-          {{s.date}} <br>
-          {{s.time}} <br>
-          {{s._id}} <br>
-         <form >
-           <input type="number" #balconyref="ngModel" [(ngModel)]="balconyProp" name="balcony" placeholder="balconyseat">
-          <input type="number" #frontref="ngModel" [(ngModel)]="frontProp" name="front" placeholder="frontseat">
-          <input type="number" #middleref="ngModel" [(ngModel)]="middleProp" name="middle"  placeholder="middleseat">
+        MOVIE:-  {{s.movie}} <br>
+        HALL:- {{s.hall}} <br>
+        DATE:- {{s.date}} <br>
+        TIME:- {{s.time}} <br>
+          <!-- {{s._id}} <br> -->
+         <form style="margin:5px;">
+           <input type="number" #balconyref="ngModel" [(ngModel)]="balconyProp" name="balcony" placeholder="Balcony Seat">
+           <br>
+           <br>
+          <input type="number" #frontref="ngModel" [(ngModel)]="frontProp" name="front" placeholder="Front Seat">
+          <br>
+          <br>
+          <input type="number" #middleref="ngModel" [(ngModel)]="middleProp" name="middle"  placeholder="Middle Seat">
+          <br>
+          <br>
         </form>
           <button (click)="bookThisShow(s._id)">Book Tickets</button>
    </div>
+</div>
 </div>
