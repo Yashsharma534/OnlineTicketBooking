@@ -95,7 +95,7 @@ app.post('/createShow', bodyParser.json() ,(req,res)=>{
     app.post('/bookTheShow', bodyParser.json() ,(req,res)=>{
 
 
-        console.log(req.body);
+        console.log(req.body);  
         var collection = connection.db(dbname).collection('show');
         collection.find({id:req.body}).toArray((err,docs)=>{
         if(!err && docs.length>0)
