@@ -42,16 +42,18 @@ middleProp;
            console.log("after filter");
            console.log(this.selectedShowsList)
     }
-    bookThisShow(id)
+    bookThisShow(show)
     {
-      alert("in book show" + id);
-      this.ds.bookThisShow({id:id,front:this.frontProp,middle:this.middleProp,balcony:this.balconyProp})
+      alert("in book show" + show._id);
+      this.ds.bookThisShow({id:show._id,front:this.frontProp,middle:this.middleProp,balcony:this.balconyProp})
       .subscribe((response)=>{
         alert(JSON.stringify(response))
         if(response.status=="ok")
         {
               alert("show booked");
-              this.router.navigate(['/payment']);
+
+             var am = this.frontProp*show.frontprize + this.middleProp*show.middleprize+this.balconyProp*show.balconyprize;
+              this.router.navigate(['/payment'], {queryParams:{total:am}});
         }
     })
   }
