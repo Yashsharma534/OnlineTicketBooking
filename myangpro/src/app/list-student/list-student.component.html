@@ -12,18 +12,21 @@
               <div class="form-group"  >
                 <label for="cars">Hall Name:</label>
                 <input #emailref="ngModel"  [(ngModel)]="hallProp" name="name"   type="name" class="form-control" placeholder="Enter name" id="name">
-               
-              </div>
-             <div class="form-group"  >
-               
+               </div>
+
+              <div class="form-group"  >
                 <label for="seat">Front:</label>
-                <option><input #emailref="ngModel"  [(ngModel)]="aProp" name="name"   type="name" class="form-control" placeholder="seats booked" id="number"></option>
+                <input #emailref="ngModel"  [(ngModel)]="aProp" name="name"   type="number" class="form-control" placeholder="seats booked" id="number">
                 <label for="seat">Middle:</label>
-               <option> <input #emailref="ngModel"  [(ngModel)]="bProp" name="name"   type="name" class="form-control" placeholder="seats booked" id="number"></option>
+                <input #emailref="ngModel"  [(ngModel)]="bProp" name="name"   type="number" class="form-control" placeholder="seats booked" id="number">
                 <label for="seat">Balcony:</label>
-               <option> <input #emailref="ngModel"  [(ngModel)]="cProp" name="name"   type="name" class="form-control" placeholder="seats booked" id="number"></option>
+                <input #emailref="ngModel"  [(ngModel)]="cProp" name="name"   type="number" class="form-control" placeholder="seats booked" id="number">
              
               </div>
+              <input #emailref="ngModel"  [(ngModel)]="frontProp" name="name"   type="number" class="form-control" placeholder="front seat prize" id="number">
+              <input #emailref="ngModel"  [(ngModel)]="middleProp" name="name"   type="number" class="form-control" placeholder="middle seat prize" id="number">
+              <input #emailref="ngModel"  [(ngModel)]="balconyProp" name="name"   type="number" class="form-control" placeholder="balcony seat prize" id="number">
+
             
               <input #emailref="ngModel" name="date"  [(ngModel)]="dateProp" type="date" id="myDate" >
               <input #emailref="ngModel" name="time"   [(ngModel)]="timeProp" type="time" id="mytime" value=""><br>

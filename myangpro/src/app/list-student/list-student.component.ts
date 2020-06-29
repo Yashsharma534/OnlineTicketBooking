@@ -15,6 +15,9 @@ bProp;
 cProp;
 dateProp;
 timeProp;
+frontProp;
+middleProp;
+balconyProp;
 
   constructor(private router:Router, private ds:DataService) { }
 
@@ -24,7 +27,7 @@ timeProp;
   liststudent()
   {
       
-    this.ds.liststudent({movie:this.movieProp,hall:this.hallProp,front:{total:40,booked:0},middle:{total:40,booked:0},balcony:{total:40,booked:0},date:this.dateProp,time:this.timeProp})
+    this.ds.liststudent({movie:this.movieProp,hall:this.hallProp,front:{total:40,booked:0},middle:{total:40,booked:0},balcony:{total:40,booked:0},frontprize:this.frontProp,middleprize:this.middleProp,balconyprize:this.balconyProp,date:this.dateProp,time:this.timeProp})
     .subscribe((response)=>{
       if(response.status=="ok")
       {

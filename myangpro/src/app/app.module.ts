@@ -51,7 +51,7 @@ import { UserbookingComponent } from './userbooking/userbooking.component';
     SignUpComponent,
     PaymentComponent,
     UserbookingComponent,
-    
+    PaymentComponent
   
   ],
   imports: [

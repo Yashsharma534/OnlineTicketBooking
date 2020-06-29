@@ -11,5 +11,8 @@ export class PaymentComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+payment()
+{
+  alert("payment done successfully");
+}
 }
